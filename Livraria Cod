@@ -1,19 +1,31 @@
-import java.util.Scanner; //importa biblioteca de checagem de Inputs de teclado
+import java.util.Scanner;
 
-public class livraria {
-    public static void main (String[] args) { //void é usado para pegar a informação e não retornar, somente guardar
-        Scanner entrada = new Scanner(System.in); // "Scanner é uma classe" ""Scanner entrada" é uma variavel" "Scanner recebe dados"
+public class Livro2 {
+    public static void main (String[] args) {
+        Scanner entrada = new Scanner(System.in);
 
+            System.out.println("Cadastre o primeiro livro: ");
+            String livro1 = entrada.nextLine();
 
-        System.out.println("Digite o nome do livro:"); // Out é para "Mostrar" para o usuario
-        String nomeLivro = entrada.nextLine();
+            System.out.println("Cadastre o Autor do Primeiro livro: ");
+            String autor1 = entrada.nextLine();
 
-        System.out.println("Digite o nome do Autor:"); // "println" display uma linha"
-        String nomeAutor = entrada.nextLine();
+           System.out.println("Cadastre o Preço do Primeiro livro: ");
+           double preco1 = entrada.nextDouble();
 
-        System.out.println("Digite o Preço:");
-        double preco = entrada.nextDouble();// double tem mais precisão após a virgula, float arredonda após a virgula (O Double.parseDouble é um método em Java usado para converter uma string (texto) em um número do tipo double (número decimal)
+            entrada.nextLine();
 
-        System.out.println("livro cadastrado: " + nomeLivro + ",Autor Cadastrado: " + nomeAutor + ",Preço do livro Cadastrado: " + preco);
+            System.out.println("Cadastre o segundo livro: ");
+            String livro2 = entrada.nextLine();
+
+            System.out.println("Cadastre o Autor do Segundo livro: ");
+            String autor2 = entrada.nextLine();
+
+            System.out.println("Cadastre o Preço do Segundo livro: ");
+            double preco2 = entrada.nextDouble();
+
+            System.out.println(" Primeiro livro cadastrado: " + livro1 + " Primeiro Autor cadastrado: " + autor1 + " Primeiro Preço cadastrado: " + preco1);
+            System.out.println(" Segundo livro cadastrado: " + livro2 + " Segundo Autor cadastrado: " + autor2 + " Segundo Preço cadastrado: " + preco2);
+
     }
 }
