@@ -1,0 +1,19 @@
+import java.util.Scanner; //importa biblioteca de checagem de Inputs de teclado
+
+public class livraria {
+    public static void main (String[] args) { //void é usado para pegar a informação e não retornar, somente guardar
+        Scanner entrada = new Scanner(System.in); // "Scanner é uma classe" ""Scanner entrada" é uma variavel" "Scanner recebe dados"
+
+
+        System.out.println("Digite o nome do livro:"); // Out é para "Mostrar" para o usuario
+        String nomeLivro = entrada.nextLine();
+
+        System.out.println("Digite o nome do Autor:"); // "println" display uma linha"
+        String nomeAutor = entrada.nextLine();
+
+        System.out.println("Digite o Preço:");
+        double preco = entrada.nextDouble();// double tem mais precisão após a virgula, float arredonda após a virgula (O Double.parseDouble é um método em Java usado para converter uma string (texto) em um número do tipo double (número decimal)
+
+        System.out.println("livro cadastrado: " + nomeLivro + ",Autor Cadastrado: " + nomeAutor + ",Preço do livro Cadastrado: " + preco);
+    }
+}
