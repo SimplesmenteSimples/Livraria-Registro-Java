@@ -1,31 +1,34 @@
-import java.util.Scanner;
+import java.util.Scanner; // Importa a classe Scanner para ler dados do usuário
 
-public class Livro2 {
-    public static void main (String[] args) {
-        Scanner entrada = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in); // Cria um objeto Scanner para entrada de dados
 
-            System.out.println("Cadastre o primeiro livro: ");
-            String livro1 = entrada.nextLine();
+        // Pergunta ao usuário quantos livros ele quer cadastrar
+        System.out.print("Quantos livros deseja cadastrar? ");
+        int quantidade = entrada.nextInt(); // Lê o número digitado e armazena na variável 'quantidade'
+        entrada.nextLine(); // Consome a quebra de linha deixada pelo nextInt()
 
-            System.out.println("Cadastre o Autor do Primeiro livro: ");
-            String autor1 = entrada.nextLine();
+        // Cria um array de Strings com o tamanho definido pelo usuário
+        String[] livros = new String[quantidade]; // "Array" é uma lista que armazena varios valores de uma variavel
 
-           System.out.println("Cadastre o Preço do Primeiro livro: ");
-           double preco1 = entrada.nextDouble();
+        // Loop para cadastrar os livros
+        for (int i = 0; i < quantidade; i++) {
+            //“Para a variável i, começando em 0; enquanto i for menor que quantidade; aumente i em 1 a cada repetição.”
+            //"for",repete o bloco de código um número específico de vezes. "i" é o numero de vezes que ira repetir
+            System.out.print("Digite o título do livro " + (i + 1) + ": ");
+            livros[i] = entrada.nextLine(); // Lê o título do livro e armazena no array na posição i
+        }
 
-            entrada.nextLine();
+        // Exibe os livros cadastrados
+        System.out.println("\n=== LIVROS CADASTRADOS ===");
+        for (int i = 0; i < livros.length; i++) {
+            //Para a variável i, começando em 0; enquanto i for menor que o tamanho do array livros; aumente i em 1 a cada repetição.
+            // o livros.length vai ver EXATAMENTE os valores dentro da variavel livros o outro só ve oq foi digitado pelo usuario
 
-            System.out.println("Cadastre o segundo livro: ");
-            String livro2 = entrada.nextLine();
+            System.out.println("Livro " + (i + 1) + ": " + livros[i]); // Mostra o título de cada livro
+        }
 
-            System.out.println("Cadastre o Autor do Segundo livro: ");
-            String autor2 = entrada.nextLine();
-
-            System.out.println("Cadastre o Preço do Segundo livro: ");
-            double preco2 = entrada.nextDouble();
-
-            System.out.println(" Primeiro livro cadastrado: " + livro1 + " Primeiro Autor cadastrado: " + autor1 + " Primeiro Preço cadastrado: " + preco1);
-            System.out.println(" Segundo livro cadastrado: " + livro2 + " Segundo Autor cadastrado: " + autor2 + " Segundo Preço cadastrado: " + preco2);
-
+        entrada.close(); // Fecha o Scanner (boa prática para liberar recursos)
     }
 }
