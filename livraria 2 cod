@@ -2,38 +2,43 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class livraria2 {
-    public static void main( String[] args) {
+    public static void main(String[] args) {
 
+        Scanner entrada = new Scanner(System.in);
         ArrayList<String> livros = new ArrayList<>(); //lista de vetores (vetores nesse contexto são os livros)
         //vetor mostra um espaço na memoria (aponta para variaveis) (se preocupa mais em encontrar oq está dentro da memoria)
         int option;
         do {  //faz pelo menos uma vez
-            System.out.println("que que cê quer?").
+            System.out.println("que que cê quer?");
             System.out.println("1- livro");
             System.out.println("2- listar");
             System.out.println("0- sair");
             option = entrada.nextInt();
             entrada.nextLine();
 
-            if(option == 1) { // precisa ser DOIS "=="
+            if (option == 1) { // precisa ser DOIS "=="
 
                 System.out.println("Nome do Livro: ");
                 String nomelivro = entrada.nextLine();
                 livros.add(nomelivro);
                 System.out.println("GG easy achei facil");
 
-            }else if (option == 2){
+            } else if (option == 2) {
                 System.out.println("toma a lista: ");
-                for ( String livro : livros ) {
+                for (String livro : livros) {
                     System.out.println("- " + livro);
                 }
-                     } else if ( option!= 0) {
-                        System.out.println(" se mata");
-                    }
-                      while (option == 0); //ta no final pq ele é uma condição de parada
-                        System.out.print("rala daqui meo");
-
+            } else if (option != 0) {
+                System.out.println(" se mata");
             }
+
+        }
+        while (option != 0); //ta no final pq ele é uma condição de parada
+        {
+
+            System.out.print("rala daqui meo");
+
         }
     }
+
 }
