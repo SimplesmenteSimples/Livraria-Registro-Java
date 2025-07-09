@@ -1,0 +1,26 @@
+public class marcos {
+    String nome;
+    String autor;
+    Double preco;
+
+
+    //Constructor
+    public marcos{ String nome, String autor, Double preco}{
+
+        this.nome = nome;
+        this.autor = autor;
+        this.preco = preco;
+
+    }
+
+   //metodo para exibir os dados
+
+   public void exibir() {
+
+       System.out.println("livro:" + nome + "Autor: " + autor + "Preco: " + preco);
+
+   }
+
+
+}
+
