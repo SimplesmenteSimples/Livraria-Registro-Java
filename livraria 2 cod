@@ -5,7 +5,7 @@ public class livraria2 {
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
-        ArrayList<String> livros = new ArrayList<>(); //lista de vetores (vetores nesse contexto são os livros)
+        ArrayList<marcos> livros = new ArrayList<>(); //lista de vetores (vetores nesse contexto são os livros)
         //vetor mostra um espaço na memoria (aponta para variaveis) (se preocupa mais em encontrar oq está dentro da memoria)
         int option;
         do {  //faz pelo menos uma vez
@@ -18,14 +18,21 @@ public class livraria2 {
 
             if (option == 1) { // precisa ser DOIS "=="
 
+
+
                 System.out.println("Nome do Livro: ");
                 String nomelivro = entrada.nextLine();
                 livros.add(nomelivro);
+
+                marcos novoLivro = new marcos(nome, autor, preco);
+                add livros.add(novoLivro);
+
                 System.out.println("GG easy achei facil");
+
 
             } else if (option == 2) {
                 System.out.println("toma a lista: ");
-                for (String livro : livros) {
+                for (marcos livro : livros) {
                     System.out.println("- " + livro);
                 }
             } else if (option != 0) {
